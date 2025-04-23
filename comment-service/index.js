@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const connectToDb = require('./dbconnect');
 const Comment = require('./models/comment');
-require('dotenv').config(); // Import dotenv to load environment variables
+
 
 const app = express();
 app.use(bodyParser.json());
