@@ -1,0 +1,8 @@
+FROM node:23-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY ../.env ./.env
+COPY . .
+EXPOSE 8002
+CMD ["npm", "start"]
