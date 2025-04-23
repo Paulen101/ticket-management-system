@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const connectToDb = require('../dbconnect');
+const connectToDb = require('./dbconnect');
 const Notification = require('./models/notification');
 require('dotenv').config(); // Import dotenv to load environment variables
 
