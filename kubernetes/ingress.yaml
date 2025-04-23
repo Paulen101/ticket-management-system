@@ -11,27 +11,27 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: ticket-service
+            name: ticket-ticket-service
             port:
               number: 8000
       - path: /users
         pathType: Prefix
         backend:
           service:
-            name: user-service
+            name: ticket-user-service
             port:
               number: 8001
       - path: /comments
         pathType: Prefix
         backend:
           service:
-            name: comment-service
+            name: ticket-comment-service
             port:
               number: 8002
       - path: /notifications
         pathType: Prefix
         backend:
           service:
-            name: notification-service
+            name: ticket-notification-service
             port:
               number: 8003

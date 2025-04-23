@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ticket-service
+  name: ticket-ticket-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ticket-service
+      app: ticket-ticket-service
   template:
     metadata:
       labels:
-        app: ticket-service
+        app: ticket-ticket-service
     spec:
       containers:
       - name: ticket
-        image: paulchhun/ticket-service:latest
+        image: paulchhun/ticket-ticket-service:latest
         ports:
         - containerPort: 8000
 
@@ -22,20 +22,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: user-service
+  name: ticket-user-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: user-service
+      app: ticket-user-service
   template:
     metadata:
       labels:
-        app: user-service
+        app: ticket-user-service
     spec:
       containers:
       - name: user
-        image: paulchhun/user-service:latest
+        image: paulchhun/ticket-user-service:latest
         ports:
         - containerPort: 8001
 
@@ -43,20 +43,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: comment-service
+  name: ticket-comment-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: comment-service
+      app: ticket-comment-service
   template:
     metadata:
       labels:
-        app: comment-service
+        app: ticket-comment-service
     spec:
       containers:
       - name: comment
-        image: paulchhun/comment-service:latest
+        image: paulchhun/ticket-comment-service:latest
         ports:
         - containerPort: 8002
 
@@ -64,19 +64,19 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: notification-service
+  name: ticket-notification-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: notification-service
+      app: ticket-notification-service
   template:
     metadata:
       labels:
-        app: notification-service
+        app: ticket-notification-service
     spec:
       containers:
       - name: notification
-        image: paulchhun/notification-service:latest
+        image: paulchhun/ticket-notification-service:latest
         ports:
         - containerPort: 8003

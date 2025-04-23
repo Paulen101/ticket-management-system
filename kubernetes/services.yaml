@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ticket-service
+  name: ticket-ticket-service
 spec:
   selector:
-    app: ticket-service
+    app: ticket-ticket-service
   ports:
   - port: 8000
     targetPort: 8000
@@ -12,10 +12,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: user-service
+  name: ticket-user-service
 spec:
   selector:
-    app: user-service
+    app: ticket-user-service
   ports:
   - port: 8001
     targetPort: 8001
@@ -23,10 +23,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: comment-service
+  name: ticket-comment-service
 spec:
   selector:
-    app: comment-service
+    app: ticket-comment-service
   ports:
   - port: 8002
     targetPort: 8002
@@ -34,10 +34,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: notification-service
+  name: ticket-notification-service
 spec:
   selector:
-    app: notification-service
+    app: ticket-notification-service
   ports:
   - port: 8003
     targetPort: 8003
