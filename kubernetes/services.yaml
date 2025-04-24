@@ -3,41 +3,52 @@ kind: Service
 metadata:
   name: ticket-ticket-service
 spec:
+  type: NodePort  
   selector:
     app: ticket-ticket-service
   ports:
   - port: 8000
     targetPort: 8000
+    nodePort: 30000  
+
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: ticket-user-service
 spec:
+  type: NodePort  
   selector:
     app: ticket-user-service
   ports:
   - port: 8001
     targetPort: 8001
+    nodePort: 30001 
+
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: ticket-comment-service
 spec:
+  type: NodePort  
   selector:
     app: ticket-comment-service
   ports:
   - port: 8002
     targetPort: 8002
+    nodePort: 30002  
+
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: ticket-notification-service
 spec:
+  type: NodePort  
   selector:
     app: ticket-notification-service
   ports:
   - port: 8003
     targetPort: 8003
+    nodePort: 30003  

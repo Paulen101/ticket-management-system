@@ -2,33 +2,35 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ticketing-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
   - host: ticketing.local
     http:
       paths:
-      - path: /tickets
+      - path: /ticket-service
         pathType: Prefix
         backend:
           service:
             name: ticket-ticket-service
             port:
               number: 8000
-      - path: /users
+      - path: /user-service
         pathType: Prefix
         backend:
           service:
             name: ticket-user-service
             port:
               number: 8001
-      - path: /comments
+      - path: /comment-service
         pathType: Prefix
         backend:
           service:
             name: ticket-comment-service
             port:
               number: 8002
-      - path: /notifications
+      - path: /notification-services
         pathType: Prefix
         backend:
           service:
